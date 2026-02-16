@@ -6,6 +6,8 @@ import Signup from "./pages/signup";
 import StudentDashboard from "./pages/StudentDashboard"
 import TeacherDashboard from "./pages/TeacherDashboard"
 import Createcourse from "./pages/createcourse"
+import Profile from "./pages/profile"
+import ManageUploads from "./pages/manageuploads"
 
 export default function App() {
   return (
@@ -18,6 +20,8 @@ export default function App() {
         <Route path="/course" element={<Createcourse />} />
         <Route path="/student-dashboard" element={<StudentDashboard />} />
         <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/manage-uploads" element={<ManageUploads />} />
       </Routes>
     </BrowserRouter>
   );

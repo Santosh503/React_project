@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { LayoutDashboard, BookOpen, Upload, Download, User } from "lucide-react";
 
 export default function Sidebar({ role }) {
@@ -6,21 +7,36 @@ export default function Sidebar({ role }) {
       <h1 className="text-2xl font-bold mb-10">LMS</h1>
 
       <ul className="space-y-4">
-        <li className="flex items-center gap-3 bg-blue-600 px-4 py-2 rounded-lg">
-          <LayoutDashboard size={18} />
-          Dashboard
+        <li>
+          <Link
+            to={role === "teacher" ? "/teacher-dashboard" : "/student-dashboard"}
+            className="flex items-center gap-3 bg-blue-600 px-4 py-2 rounded-lg"
+          >
+            <LayoutDashboard size={18} />
+            Dashboard
+          </Link>
         </li>
 
-        <li className="flex items-center gap-3 px-4 py-2 hover:bg-blue-600 rounded-lg cursor-pointer">
-          <BookOpen size={18} />
-          My Courses
+        <li>
+          <Link
+            to="/course"
+            className="flex items-center gap-3 px-4 py-2 hover:bg-blue-600 rounded-lg"
+          >
+            <BookOpen size={18} />
+            My Courses
+          </Link>
         </li>
 
         {/* Teacher only */}
         {role === "teacher" && (
-          <li className="flex items-center gap-3 px-4 py-2 hover:bg-blue-600 rounded-lg cursor-pointer">
-            <Upload size={18} />
-            Manage Uploads
+          <li>
+            <Link
+              to="/manage-uploads"
+              className="flex items-center gap-3 px-4 py-2 hover:bg-blue-600 rounded-lg"
+            >
+              <Upload size={18} />
+              Manage Uploads
+            </Link>
           </li>
         )}
 
@@ -32,9 +48,14 @@ export default function Sidebar({ role }) {
           </li>
         )}
 
-        <li className="flex items-center gap-3 px-4 py-2 hover:bg-blue-600 rounded-lg cursor-pointer">
-          <User size={18} />
-          Profile
+        <li>
+          <Link
+            to="/profile"
+            className="flex items-center gap-3 px-4 py-2 hover:bg-blue-600 rounded-lg"
+          >
+            <User size={18} />
+            Profile
+          </Link>
         </li>
       </ul>
     </div>

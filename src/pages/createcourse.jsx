@@ -13,14 +13,6 @@ export default function Createcourse() {
           <h1 className="text-2xl font-bold">Create Course</h1>
         </div>
 
-        {/* Stats */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <StatCard title="Total Courses" value="8" icon={<Book />} color="bg-blue-500" />
-          <StatCard title="Total Uploads" value="25" icon={<Upload />} color="bg-green-500" />
-          <StatCard title="Total Students" value="120" icon={<Users />} color="bg-orange-500" />
-          <StatCard title="Total Downloads" value="45" icon={<Download />} color="bg-purple-500" />
-        </div> */}
-
         {/* Create Course Form */}
         <div className="bg-white p-8 rounded-xl shadow max-w-5xl">
           <h2 className="text-xl font-bold mb-6">Course Information</h2>
